@@ -29,8 +29,8 @@ export default function GameScreen() {
       // Time has expired
       // TODO: update appropriate state variables
       setTimeLeft(0) 
-      getNextRound();
       setTotalAnswers(totalAnswers + 1)
+      
     }
   };
 
@@ -56,7 +56,7 @@ export default function GameScreen() {
     nameOptions = shuffle(nameOptions);
 
     // TODO: Update state here.
-    setOptions(options)
+    setOptions(nameOptions)
     setTimeLeft(5000);
   };
 
@@ -67,9 +67,7 @@ export default function GameScreen() {
       setCurrentScore(currentScore + 1)
     }
   
-  
       setTotalAnswers(totalAnswers + 1)
-
   };
 
   // Call the countDown() method every 10 milliseconds.
